@@ -6,7 +6,7 @@ function updateTime() {
     let newYorkTimeElement = newYorkElement.querySelector(".time");
     let newYorkTime = moment().tz("America/New_York");
 
-    newYorkDateElement.innerHTML = newYorkTime.format("MMMM	Do YYYY");
+    newYorkDateElement.innerHTML = newYorkTime.format("MMMM	 Do YYYY");
     newYorkTimeElement.innerHTML = newYorkTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
@@ -28,6 +28,9 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
@@ -40,8 +43,9 @@ function updateCity(event) {
       <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
     "A"
   )}</small></div>
-    </div>
-    `;
+  </div>
+  <a href="/">All cities</a>
+  `;
 }
 
 updateTime();
