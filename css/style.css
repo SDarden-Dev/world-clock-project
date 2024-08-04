@@ -1,17 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 body {
-  background-color: #f9f7fe;
-  font-family: sans-serif;
+  background-color: #2d3644;
+  font-family: Roboto;
 }
 
 h1 {
   text-align: center;
-  font-family: sans-serif;
-  font-size: 36px;
+  font-family: Roboto;
+  font-size: 40px;
+  color: white;
+  font-weight: 700;
 }
 
 h2 {
   margin: 0 0 5px;
   font-size: 28px;
+  color: white;
 }
 
 select {
@@ -20,14 +25,15 @@ select {
   font-size: 18px;
   border-radius: 4px;
   padding: 10px;
+  color: #9f8551;
 }
 
 .container {
   max-width: 600px;
   margin: 60px auto;
-  background: white;
+  background: #9f8551;
   padding: 30px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(9, 9, 9, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
 }
 
@@ -36,7 +42,8 @@ select {
   margin: 10px 0;
   justify-content: space-between;
   padding: 30px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  border-bottom: 1px dashed #2d3644;
+  font-family: Roboto;
 }
 
 .city:last-child {
@@ -45,21 +52,34 @@ select {
 
 .date {
   opacity: 0.7;
+  color: white;
+  font-family: Roboto;
 }
 
 .time {
   font-size: 48px;
   font-weight: bold;
+  color: white;
+  font-family: Roboto;
 }
 
 .time small {
   font-size: 24px;
   vertical-align: middle;
   line-height: 48px;
+  font-family: Roboto;
 }
 
 footer {
   text-align: center;
   font-size: 18px;
-  color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+strong {
+  color: #9f8551;
+}
+
+a {
+  color: #9f8551;
 }
